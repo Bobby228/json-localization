@@ -6,6 +6,7 @@ use App\Facades\Account;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Account\CreateAccountRequest;
 use App\Http\Requests\Account\SignInRequest;
+use App\Http\Resources\Account\UserResource;
 
 class AccountController extends Controller
 {
@@ -20,5 +21,10 @@ class AccountController extends Controller
         return [
             'token' => $request->signIn()
         ];
+    }
+
+    public function show()
+    {
+        return new UserResource(auth()->user());
     }
 }

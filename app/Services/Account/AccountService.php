@@ -34,7 +34,5 @@ class AccountService
         }
 
         throw new InvalidUserCredentialsException();
-
-        // return '';
     }
 }
