@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(3)->create();
 
-        Language::factory(3)->create();
+        Language::factory(10)->create();
 
     }
 }
